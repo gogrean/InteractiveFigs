@@ -61,7 +61,7 @@ def plot_LP(clusters, categories = ["Limit+SZ", "Limit-SZ", "RHclusters"],
     if withLineEq:
         hover = p1.select(dict(type=HoverTool))
         hover[index].renderers = [ln]
-        hover[index].tooltips = ("log(L/1e44 erg/s) = B log(P/1e24 W/Hz) + A")
+        hover[index].tooltips = ("log(L/1e44 erg/s) = 2.11 log(P/1e24 W/Hz) + 0.083")
     else:
         hover = p1.select(dict(type=HoverTool))
         hover[index].tooltips=None
@@ -131,7 +131,7 @@ def plot_YP(clusters, categories = ["Limit+SZ", "Limit-SZ", "RHclusters"],
     if withLineEq:
         hover = p2.select(dict(type=HoverTool))
         hover[ii].renderers = [ln]
-        hover[ii].tooltips = ("log(Y/1e-4 Mpc\u00B2) = B log(P/1e24 W/Hz) + A")
+        hover[ii].tooltips = ("log(Y/1e-4 Mpc\u00B2) = 2.03 log(P/1e24 W/Hz) - 0.133")
     else:
         hover = p2.select(dict(type=HoverTool))
         hover[ii].tooltips = None
@@ -177,5 +177,3 @@ def plot_LP_YP(file, outfile='Lx-P.html',
     elif withLP == True and withSZ != True:
         p1 = plot_LP(clusters, withLineEq=withLineEq)
         show(p1)
-
-plot_LP_YP("RH_clusters.csv", withLP=True, withSZ=True, outfile="LP-YP.html", withLineEq=True)
