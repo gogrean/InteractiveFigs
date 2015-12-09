@@ -1,19 +1,14 @@
 from idv_plot import plot_patches
 
 # Directory where the bin map and Xspec log files are located.
-root = "/Users/gogrean/data/from_calypso/chandra/macsj1149/merged7"
+root = "."
 
 # File name of the bin map.
 binmap = "contbin_binmap.fits"
 
-# Point source regions included in bin map?
-# True if yes, False otherwise.
-point_sources = False
-
-
 # Output html file name and title.
-out = "MACSJ1149_Tmap.html"
-out_title = "Temperature Map of MACS J1149.6+2223"
+out = "MACSJ0717_Tmap.html"
+out_title = "Temperature Map of MACS J0717.5+3745"
 
 # Plot style.
 title_font_size = '16pt'
@@ -33,17 +28,15 @@ xcm_units = 'keV'
 # Colormap properties.
 
 # Colormap name. Default is 'coolwarm', in which cold regions are blue and hot regions are red.
-cmap = 'coolwarm'
+cmap = 'jet'
 
-# Colormap limits. By default, these are min(parameter) and max(parameter). 
-vmin = None
-vmax = None
+# Colormap limits. By default, these are min(parameter) and max(parameter).
+vmin = 8.
+vmax = 27.
 
 
-plot_patches(root, binmap, xcm_id, point_sources=point_sources,
+plot_patches(root, binmap, xcm_id,
         out=out, out_title=out_title,
         title_font_size=title_font_size, label_font_size=label_font_size,
         xcm_param=xcm_param, xcm_units=xcm_units,
         xaxis_label=xaxis_label, yaxis_label=yaxis_label, palette=cmap, vmin=vmin, vmax=vmax)
-
-
