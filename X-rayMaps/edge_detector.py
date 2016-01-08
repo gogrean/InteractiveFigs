@@ -11,7 +11,7 @@ def edge_detect(im, hdr):
     exclude_DEC = np.NaN
     contours = measure.find_contours(im,0.5,fully_connected='high')
     x_pix = contours[0][:,0]
-    y_pix = im.shape[1] - contours[0][:,1] - 1
+    y_pix = contours[0][:,1]
     exclude_reg = np.array(contours).shape[0] - 1
     if exclude_reg > 0:
         i = 1
@@ -19,7 +19,7 @@ def edge_detect(im, hdr):
         exclude_DEC = []
         while i <= exclude_reg:
             x_excl = contours[i][:,0]
-            y_excl = im.shape[1] - contours[i][:,1] - 1
+            y_excl = contours[i][:,1]
             tmp_RA = []
             tmp_DEC = []
             for j in np.arange(len(x_excl)):
