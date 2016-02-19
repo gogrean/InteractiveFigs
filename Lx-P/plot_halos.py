@@ -14,8 +14,8 @@ def plot_LP(clusters, categories = ["Limit+SZ", "Limit-SZ", "RHclusters"],
         title='L-P Relation for Radio Halo Clusters',
         xaxis_label='0.1-2.4 keV X-ray Luminosity (x 1E+44 erg/s)',
         yaxis_label='1.4 GHz Radio Halo Power (x 1E+24 W/Hz)',
-        label_font_size='14pt', title_font_size='16pt',
-        x_range=[1, 50], y_range=[0.1,100], xsize=320, ysize=320,
+        label_font_size='12pt', title_font_size='14pt',
+        x_range=[1, 50], y_range=[0.1,100], xsize=600, ysize=600,
         x_axis_type="log", y_axis_type="log",
         legend=["Upper limits on RH power, with SZ",
             "Upper limits on RH power, no SZ", "RH detections"],
@@ -23,7 +23,7 @@ def plot_LP(clusters, categories = ["Limit+SZ", "Limit-SZ", "RHclusters"],
         withLineEq=False
         ):
 
-    p1 = figure(width=xsize, height=ysize,
+    p1 = figure(plot_width=xsize, height=ysize,
         title=title, title_text_font_size=title_font_size,
         x_axis_type=x_axis_type, y_axis_type=y_axis_type,
         x_range=x_range, y_range=y_range, tools=TOOLS)
@@ -38,14 +38,14 @@ def plot_LP(clusters, categories = ["Limit+SZ", "Limit-SZ", "RHclusters"],
     for cat in categories:
         source = BuildDataSource(clusters,cat)
         if index <= 1:
-            f = p1.inverted_triangle(x='lx', y='pow', size=15, color=colors[index],
+            f = p1.inverted_triangle(x='lx', y='pow', size=10, color=colors[index],
                     fill_alpha=0.75, line_color=colors[index], line_width=2,
                     legend=legend[index], source=source)
             hover = p1.select(dict(type=HoverTool))
             hover[index].renderers = [f]
             hover[index].tooltips = tooltips0 + extra_tooltips[index]
         else:
-            f = p1.circle(x='lx', y='pow', size=20, color=colors[index],
+            f = p1.circle(x='lx', y='pow', size=15, color=colors[index],
                     fill_alpha = 0.75, line_color=colors[index], line_width=2,
                     legend=legend[index], source=source)
             hover = p1.select(dict(type=HoverTool))
@@ -75,7 +75,7 @@ def plot_LP(clusters, categories = ["Limit+SZ", "Limit-SZ", "RHclusters"],
     p1.legend.orientation = "top_left"
     p1.legend.label_text_font = "times"
     p1.legend.label_text_color = "#36454F"
-    p1.legend.label_text_font_size = "14pt"
+    p1.legend.label_text_font_size = "10pt"
 
     return p1
 
@@ -84,8 +84,8 @@ def plot_YP(clusters, categories = ["Limit+SZ", "Limit-SZ", "RHclusters"],
     title='Y-P Relation for Radio Halo Clusters',
     xaxis_label='SZ Y Value (x 1E-04 Mpc\u00B2)',
     yaxis_label='1.4 GHz Radio Halo Power (x 1E+24 W/Hz)',
-    label_font_size='14pt', title_font_size='16pt',
-    x_range=[0.2,6], y_range=[0.1,100], xsize=320, ysize=320,
+    label_font_size='12pt', title_font_size='14pt',
+    x_range=[0.2,6], y_range=[0.1,100], xsize=600, ysize=600,
     x_axis_type="log", y_axis_type="log",
     legend=["Upper limits on RH power, with SZ",
         "Upper limits on RH power, no SZ", "RH detections"],
@@ -109,14 +109,14 @@ def plot_YP(clusters, categories = ["Limit+SZ", "Limit-SZ", "RHclusters"],
         cat = categories[ii]
         source = BuildDataSource(clusters,cat)
         if ii == 0:
-            f = p2.inverted_triangle(x='y500', y='pow', size=15, color=colors[ii],
+            f = p2.inverted_triangle(x='y500', y='pow', size=10, color=colors[ii],
                     fill_alpha=0.75, line_color=colors[ii], line_width=2,
                     legend=legend[ii], source=source)
             hover = p2.select(dict(type=HoverTool))
             hover[ii].renderers = [f]
             hover[ii].tooltips = tooltips0 + extra_tooltips[ii]
         else:
-            f = p2.circle(x='y500', y='pow', size=20, color=colors[ii],
+            f = p2.circle(x='y500', y='pow', size=15, color=colors[ii],
                     fill_alpha = 0.75, line_color=colors[ii], line_width=2,
                     legend=legend[ii], source=source)
             hover = p2.select(dict(type=HoverTool))
@@ -145,7 +145,7 @@ def plot_YP(clusters, categories = ["Limit+SZ", "Limit-SZ", "RHclusters"],
     p2.legend.orientation = "top_left"
     p2.legend.label_text_font = "times"
     p2.legend.label_text_color = "#36454F"
-    p2.legend.label_text_font_size = "14pt"
+    p2.legend.label_text_font_size = "10pt"
 
     return p2
 
@@ -154,7 +154,7 @@ def plot_LP_YP(file, outfile='Lx-P.html',
       title='L-P Relation for Radio Halo Clusters',
       categories = ["Limit+SZ", "Limit-SZ", "RHclusters"],
       colors=['#462066', '#00AAA0', '#FF7A5A'],
-      label_font_size='14pt', title_font_size='16pt',
+      label_font_size='10pt', title_font_size='12pt',
       x_axis_type="log", y_axis_type="log",
       legend=["Upper limits on RH power, with SZ",
         "Upper limits on RH power, no SZ", "RH detections"],
@@ -166,10 +166,10 @@ def plot_LP_YP(file, outfile='Lx-P.html',
 
 
     if withSZ == True and withLP == True:
-        p1 = plot_LP(clusters, withLineEq=withLineEq)
-        p2 = plot_YP(clusters, withLineEq=withLineEq)
+        p1 = plot_LP(clusters, withLineEq=withLineEq, ysize=375)
+        p2 = plot_YP(clusters, withLineEq=withLineEq, ysize=375)
         p2.y_range = p1.y_range
-        p = gridplot([[p1,p2]], toolbar_location='above')
+        p = gridplot([[p1],[p2]], toolbar_location='above')
         show(p)
     elif withLP != True and withSZ == True:
         p2 = plot_YP(clusters, withLineEq=withLineEq)
