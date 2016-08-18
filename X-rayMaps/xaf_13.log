@@ -1,0 +1,335 @@
+#XSPEC version: 12.8.2
+#Build Date/Time: Mon Sep 29 12:36:32 2014
+#
+!XSPEC12>statistic cstat;
+#Default fit statistic is set to: C-Statistic
+#   This will apply to all current and newly loaded spectra.
+#
+!XSPEC12>abund feld;
+# Solar Abundance Vector set to feld:  Feldman U. Physica Scripta 46, 202 (1992) (abundances not included in this paper are set to grsa).
+#
+!XSPEC12>method leven 100 0.01;
+#
+!XSPEC12>xsect vern;
+# Cross Section Table set to vern:  Verner, Ferland, Korista, and Yakovlev 1996
+#
+!XSPEC12>cosmo 70 0 0.7;
+#
+!XSPEC12>query yes;
+#
+!XSPEC12>setp energy;
+#
+!XSPEC12>setplot energy
+#
+!XSPEC12>setp command rescale x 0.5 7.0;
+#
+!XSPEC12>setplot command rescale x 0.5 7.0
+#
+!XSPEC12>da 1:1 1655_bin13_grp1.pi;
+#
+!XSPEC12>data 1:1 1655_bin13_grp1.pi
+#
+#1 spectrum  in use
+# 
+#Spectral Data File: 1655_bin13_grp1.pi  Spectrum 1
+#Net count rate (cts/s) for Spectrum:1  1.872e-02 +/- 1.108e-03 (89.7 % total)
+# Assigned to Data Group 1 and Plot Group 1
+#  Noticed Channels:  1-225
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 1.706e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                1655_bin13_bkg.pi
+#  Background Exposure Time: 4.15e+05 sec
+# Using Response (RMF) File            1655_bin13.rmf for Source 1
+# Using Auxiliary Response (ARF) File  1655_bin13.arf
+#
+#
+!XSPEC12>da 2:2 4200_bin13_grp1.pi;
+#
+!XSPEC12>data 2:2 4200_bin13_grp1.pi
+#
+#2 spectra  in use
+# 
+#Spectral Data File: 4200_bin13_grp1.pi  Spectrum 2
+#Net count rate (cts/s) for Spectrum:2  1.596e-02 +/- 5.503e-04 (91.7 % total)
+# Assigned to Data Group 2 and Plot Group 2
+#  Noticed Channels:  1-463
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 5.802e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                4200_bin13_bkg.pi
+#  Background Exposure Time: 4.15e+05 sec
+# Using Response (RMF) File            4200_bin13.rmf for Source 1
+# Using Auxiliary Response (ARF) File  4200_bin13.arf
+#
+#
+!XSPEC12>da 3:3 16235_bin13_grp1.pi;
+#
+!XSPEC12>data 3:3 16235_bin13_grp1.pi
+#
+#3 spectra  in use
+# 
+#Spectral Data File: 16235_bin13_grp1.pi  Spectrum 3
+#Net count rate (cts/s) for Spectrum:3  1.471e-02 +/- 5.123e-04 (84.6 % total)
+# Assigned to Data Group 3 and Plot Group 3
+#  Noticed Channels:  1-461
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 6.837e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                16235_bin13_bkg.pi
+#  Background Exposure Time: 2.404e+05 sec
+# Using Response (RMF) File            16235_bin13.rmf for Source 1
+# Using Auxiliary Response (ARF) File  16235_bin13.arf
+#
+#
+!XSPEC12>da 4:4 16305_bin13_grp1.pi;
+#
+!XSPEC12>data 4:4 16305_bin13_grp1.pi
+#
+#4 spectra  in use
+# 
+#Spectral Data File: 16305_bin13_grp1.pi  Spectrum 4
+#Net count rate (cts/s) for Spectrum:4  1.432e-02 +/- 4.228e-04 (90.7 % total)
+# Assigned to Data Group 4 and Plot Group 4
+#  Noticed Channels:  1-501
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 9.042e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                16305_bin13_bkg.pi
+#  Background Exposure Time: 2.404e+05 sec
+# Using Response (RMF) File            16305_bin13.rmf for Source 1
+# Using Auxiliary Response (ARF) File  16305_bin13.arf
+#
+#
+!XSPEC12>ig 1-7:**-0.5,7.0-**;
+#
+!XSPEC12>ignore 1-7:**-0.5,7.0-**
+#     5 channels (1-5) ignored in spectrum #     1
+#     6 channels (1-6) ignored in spectrum #     2
+#    10 channels (1-10) ignored in spectrum #     3
+#     7 channels (1-7) ignored in spectrum #     4
+#    47 channels (179-225) ignored in spectrum #     1
+#   149 channels (315-463) ignored in spectrum #     2
+#   130 channels (332-461) ignored in spectrum #     3
+#   141 channels (361-501) ignored in spectrum #     4
+#
+#
+!XSPEC12>ig 1:**-0.7;
+#
+!XSPEC12>ignore 1:**-0.7
+#    10 channels (1-10) ignored in spectrum #     1
+#
+#
+!XSPEC12>ig bad;
+#
+!XSPEC12>ignore bad
+#
+#ignore:    18 channels ignored from  source number 3
+#ignore:    63 channels ignored from  source number 4
+#ignore:     0 channels ignored from  source number 1
+#ignore:    95 channels ignored from  source number 2
+#
+!XSPEC12>model apec + (apec + pow + apec) * phabs  ;  0.107360    -0.001        0.008    0.008      64      64  ;  1.0         -0.01             0        0       5       5  ;  0.0         -0.01             0        0       2       2  ;  6.77339E-07 -0.001            0        0    1e24    1e24  ;  0.625630    -0.01         0.008    0.008      64      64  ;  1.0         -0.01             0        0       5       5  ;  0.0         -0.01             0        0       2       2  ;  3.14169E-07 -0.001            0        0    1e24    1e24  ;  1.41        -0.01            -5       -5       5       5  ;  9.69394E-07 -0.01             0        0    1e24    1e24  ;  10.0         0.01         0.008    0.008      64      64  ;  0.21        -0.01             0        0       5       5  ;  0.5458      -0.01             0        0       2       2  ;  5e-4         0.001            0        0    1e24    1e24  ;  8.4e-2      -0.001            0        0       1       1  ;  =1  ;  =2  ;  =3  ;  =4  ;  =5  ;  =6  ;  =7  ;  =8  ;  =9  ;  7.03206E-07 -0.01             0        0    1e24    1e24  ;  =11  ;  =12  ;  =13  ;  =14  ;  =15  ;  =1  ;  =2  ;  =3  ;  =4  ;  =5  ;  =6  ;  =7  ;  =8  ;  =9  ;  4.26007E-07 -0.01             0        0    1e24    1e24  ;  =11  ;  =12  ;  =13  ;  =14  ;  =15  ;  =1  ;  =2  ;  =3  ;  =4  ;  =5  ;  =6  ;  =7  ;  =8  ;  =9  ;  4.15823E-07 -0.01             0        0    1e24    1e24  ;  =11  ;  =12  ;  =13  ;  =14  ;  =15;
+#
+#========================================================================
+#Model apec<1> + (apec<2> + powerlaw<3> + apec<4>)phabs<5> Source No.: 1   Active/On
+#Model Model Component  Parameter  Unit     Value
+# par  comp
+#                           Data group: 1
+#   1    1   apec       kT         keV      0.107360     frozen
+#   2    1   apec       Abundanc            1.00000      frozen
+#   3    1   apec       Redshift            0.0          frozen
+#   4    1   apec       norm                6.77339E-07  frozen
+#   5    2   apec       kT         keV      0.625630     frozen
+#   6    2   apec       Abundanc            1.00000      frozen
+#   7    2   apec       Redshift            0.0          frozen
+#   8    2   apec       norm                3.14169E-07  frozen
+#   9    3   powerlaw   PhoIndex            1.41000      frozen
+#  10    3   powerlaw   norm                9.69394E-07  frozen
+#  11    4   apec       kT         keV      10.0000      +/-  0.0          
+#  12    4   apec       Abundanc            0.210000     frozen
+#  13    4   apec       Redshift            0.545800     frozen
+#  14    4   apec       norm                5.00000E-04  +/-  0.0          
+#  15    5   phabs      nH         10^22    8.40000E-02  frozen
+#                           Data group: 2
+#  16    1   apec       kT         keV      0.107360     = 1
+#  17    1   apec       Abundanc            1.00000      = 2
+#  18    1   apec       Redshift            0.0          = 3
+#  19    1   apec       norm                6.77339E-07  = 4
+#  20    2   apec       kT         keV      0.625630     = 5
+#  21    2   apec       Abundanc            1.00000      = 6
+#  22    2   apec       Redshift            0.0          = 7
+#  23    2   apec       norm                3.14169E-07  = 8
+#  24    3   powerlaw   PhoIndex            1.41000      = 9
+#  25    3   powerlaw   norm                7.03206E-07  frozen
+#  26    4   apec       kT         keV      10.0000      = 11
+#  27    4   apec       Abundanc            0.210000     = 12
+#  28    4   apec       Redshift            0.545800     = 13
+#  29    4   apec       norm                5.00000E-04  = 14
+#  30    5   phabs      nH         10^22    8.40000E-02  = 15
+#                           Data group: 3
+#  31    1   apec       kT         keV      0.107360     = 1
+#  32    1   apec       Abundanc            1.00000      = 2
+#  33    1   apec       Redshift            0.0          = 3
+#  34    1   apec       norm                6.77339E-07  = 4
+#  35    2   apec       kT         keV      0.625630     = 5
+#  36    2   apec       Abundanc            1.00000      = 6
+#  37    2   apec       Redshift            0.0          = 7
+#  38    2   apec       norm                3.14169E-07  = 8
+#  39    3   powerlaw   PhoIndex            1.41000      = 9
+#  40    3   powerlaw   norm                4.26007E-07  frozen
+#  41    4   apec       kT         keV      10.0000      = 11
+#  42    4   apec       Abundanc            0.210000     = 12
+#  43    4   apec       Redshift            0.545800     = 13
+#  44    4   apec       norm                5.00000E-04  = 14
+#  45    5   phabs      nH         10^22    8.40000E-02  = 15
+#                           Data group: 4
+#  46    1   apec       kT         keV      0.107360     = 1
+#  47    1   apec       Abundanc            1.00000      = 2
+#  48    1   apec       Redshift            0.0          = 3
+#  49    1   apec       norm                6.77339E-07  = 4
+#  50    2   apec       kT         keV      0.625630     = 5
+#  51    2   apec       Abundanc            1.00000      = 6
+#  52    2   apec       Redshift            0.0          = 7
+#  53    2   apec       norm                3.14169E-07  = 8
+#  54    3   powerlaw   PhoIndex            1.41000      = 9
+#  55    3   powerlaw   norm                4.15823E-07  frozen
+#  56    4   apec       kT         keV      10.0000      = 11
+#  57    4   apec       Abundanc            0.210000     = 12
+#  58    4   apec       Redshift            0.545800     = 13
+#  59    4   apec       norm                5.00000E-04  = 14
+#  60    5   phabs      nH         10^22    8.40000E-02  = 15
+#________________________________________________________________________
+#
+#
+#Fit statistic : C-Statistic =        1357.00 using 1150 PHA bins and 1148 degrees of freedom.
+#
+#Test statistic : Chi-Squared =         986.94 using 1150 PHA bins.
+# Reduced chi-squared =        0.85970 for   1148 degrees of freedom 
+# Null hypothesis probability =   9.997832e-01
+# Current data and model not fit yet.
+#
+!XSPEC12>renorm;
+#
+#Fit statistic : C-Statistic =        1357.00 using 1150 PHA bins and 1148 degrees of freedom.
+#
+#Test statistic : Chi-Squared =         986.94 using 1150 PHA bins.
+# Reduced chi-squared =        0.85970 for   1148 degrees of freedom 
+# Null hypothesis probability =   9.997832e-01
+# Current data and model not fit yet.
+#
+!XSPEC12>fit 1000 1e-2;
+#                                   Parameters
+#C-Statistic  |beta|/N    Lvl         11:kT       14:norm
+#1054.74      890856       -3       12.2092   0.000629907
+#1014.58      245209       -4       15.4028   0.000696003
+#1013.48      18987.3      -5       16.9252   0.000701520
+#1013.47      1892.2       -6       17.1165   0.000702089
+#1013.47      153.539       0       17.1539   0.000702121
+#==============================
+# Variances and Principal Axes
+#                11       14  
+# 3.7721E+00| -1.0000  -0.0000  
+# 1.5048E-10|  0.0000  -1.0000  
+#------------------------------
+#
+#========================
+#  Covariance Matrix
+#        1           2   
+#   3.772e+00   1.808e-06
+#   1.808e-06   1.513e-10
+#------------------------
+#
+#========================================================================
+#Model apec<1> + (apec<2> + powerlaw<3> + apec<4>)phabs<5> Source No.: 1   Active/On
+#Model Model Component  Parameter  Unit     Value
+# par  comp
+#                           Data group: 1
+#   1    1   apec       kT         keV      0.107360     frozen
+#   2    1   apec       Abundanc            1.00000      frozen
+#   3    1   apec       Redshift            0.0          frozen
+#   4    1   apec       norm                6.77339E-07  frozen
+#   5    2   apec       kT         keV      0.625630     frozen
+#   6    2   apec       Abundanc            1.00000      frozen
+#   7    2   apec       Redshift            0.0          frozen
+#   8    2   apec       norm                3.14169E-07  frozen
+#   9    3   powerlaw   PhoIndex            1.41000      frozen
+#  10    3   powerlaw   norm                9.69394E-07  frozen
+#  11    4   apec       kT         keV      17.1539      +/-  1.94218      
+#  12    4   apec       Abundanc            0.210000     frozen
+#  13    4   apec       Redshift            0.545800     frozen
+#  14    4   apec       norm                7.02121E-04  +/-  1.23021E-05  
+#  15    5   phabs      nH         10^22    8.40000E-02  frozen
+#                           Data group: 2
+#  16    1   apec       kT         keV      0.107360     = 1
+#  17    1   apec       Abundanc            1.00000      = 2
+#  18    1   apec       Redshift            0.0          = 3
+#  19    1   apec       norm                6.77339E-07  = 4
+#  20    2   apec       kT         keV      0.625630     = 5
+#  21    2   apec       Abundanc            1.00000      = 6
+#  22    2   apec       Redshift            0.0          = 7
+#  23    2   apec       norm                3.14169E-07  = 8
+#  24    3   powerlaw   PhoIndex            1.41000      = 9
+#  25    3   powerlaw   norm                7.03206E-07  frozen
+#  26    4   apec       kT         keV      17.1539      = 11
+#  27    4   apec       Abundanc            0.210000     = 12
+#  28    4   apec       Redshift            0.545800     = 13
+#  29    4   apec       norm                7.02121E-04  = 14
+#  30    5   phabs      nH         10^22    8.40000E-02  = 15
+#                           Data group: 3
+#  31    1   apec       kT         keV      0.107360     = 1
+#  32    1   apec       Abundanc            1.00000      = 2
+#  33    1   apec       Redshift            0.0          = 3
+#  34    1   apec       norm                6.77339E-07  = 4
+#  35    2   apec       kT         keV      0.625630     = 5
+#  36    2   apec       Abundanc            1.00000      = 6
+#  37    2   apec       Redshift            0.0          = 7
+#  38    2   apec       norm                3.14169E-07  = 8
+#  39    3   powerlaw   PhoIndex            1.41000      = 9
+#  40    3   powerlaw   norm                4.26007E-07  frozen
+#  41    4   apec       kT         keV      17.1539      = 11
+#  42    4   apec       Abundanc            0.210000     = 12
+#  43    4   apec       Redshift            0.545800     = 13
+#  44    4   apec       norm                7.02121E-04  = 14
+#  45    5   phabs      nH         10^22    8.40000E-02  = 15
+#                           Data group: 4
+#  46    1   apec       kT         keV      0.107360     = 1
+#  47    1   apec       Abundanc            1.00000      = 2
+#  48    1   apec       Redshift            0.0          = 3
+#  49    1   apec       norm                6.77339E-07  = 4
+#  50    2   apec       kT         keV      0.625630     = 5
+#  51    2   apec       Abundanc            1.00000      = 6
+#  52    2   apec       Redshift            0.0          = 7
+#  53    2   apec       norm                3.14169E-07  = 8
+#  54    3   powerlaw   PhoIndex            1.41000      = 9
+#  55    3   powerlaw   norm                4.15823E-07  frozen
+#  56    4   apec       kT         keV      17.1539      = 11
+#  57    4   apec       Abundanc            0.210000     = 12
+#  58    4   apec       Redshift            0.545800     = 13
+#  59    4   apec       norm                7.02121E-04  = 14
+#  60    5   phabs      nH         10^22    8.40000E-02  = 15
+#________________________________________________________________________
+#
+#
+#Fit statistic : C-Statistic =        1013.47 using 1150 PHA bins and 1148 degrees of freedom.
+#
+#Test statistic : Chi-Squared =        1380.03 using 1150 PHA bins.
+# Reduced chi-squared =        1.20212 for   1148 degrees of freedom 
+# Null hypothesis probability =   2.513140e-06
+#
+!XSPEC12>error 2.706 11,14 ;
+# Parameter   Confidence Range (2.706)
+#    11        14.12      22.4309    (-3.09957,5.21135)
+#    14  0.000682033  0.000725058    (-2.0154e-05,2.28712e-05)
+#
+!XSPEC12>quit;
+#
+!XSPEC12>::tclreadline::readline write /home/gogrean/.xspec/xspec.hty
+# XSPEC: quit
+#
+!XSPEC12>tclexit
+#

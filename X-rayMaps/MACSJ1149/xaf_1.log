@@ -1,0 +1,736 @@
+#XSPEC version: 12.8.2
+#Build Date/Time: Mon Sep 29 15:36:32 2014
+#
+!XSPEC12>statistic cstat;
+#Default fit statistic is set to: C-Statistic
+#   This will apply to all current and newly loaded spectra.
+#
+!XSPEC12>xsect vern;
+# Cross Section Table set to vern:  Verner, Ferland, Korista, and Yakovlev 1996
+#
+!XSPEC12>abund feld;
+# Solar Abundance Vector set to feld:  Feldman U. Physica Scripta 46, 202 (1992) (abundances not included in this paper are set to grsa).
+#
+!XSPEC12>method leven 100 0.01;
+#
+!XSPEC12>cosmo 70 0 0.7;
+#
+!XSPEC12>query yes;
+#
+!XSPEC12>cpd /xw;
+#
+!XSPEC12>setp energy;
+#
+!XSPEC12>setplot energy
+#
+!XSPEC12>setp command rescale x 0.5 7.0;
+#
+!XSPEC12>setplot command rescale x 0.5 7.0
+#
+!XSPEC12>da 1:1 16238_bin1_grp1.pi;
+#
+!XSPEC12>data 1:1 16238_bin1_grp1.pi
+#
+#1 spectrum  in use
+# 
+#Spectral Data File: 16238_bin1_grp1.pi  Spectrum 1
+#Net count rate (cts/s) for Spectrum:1  2.020e-02 +/- 1.091e-03 (58.2 % total)
+# Assigned to Data Group 1 and Plot Group 1
+#  Noticed Channels:  1-599
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 3.024e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                16238_bin1_bkg.pi
+#  Background Exposure Time: 2.404e+05 sec
+# Using Response (RMF) File            16238_bin1.rmf for Source 1
+# Using Auxiliary Response (ARF) File  16238_bin1.arf
+#
+#
+!XSPEC12>da 2:2 16239_bin1_grp1.pi;
+#
+!XSPEC12>data 2:2 16239_bin1_grp1.pi
+#
+#2 spectra  in use
+# 
+#Spectral Data File: 16239_bin1_grp1.pi  Spectrum 2
+#Net count rate (cts/s) for Spectrum:2  1.873e-02 +/- 8.777e-04 (53.7 % total)
+# Assigned to Data Group 2 and Plot Group 2
+#  Noticed Channels:  1-657
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 4.858e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                16239_bin1_bkg.pi
+#  Background Exposure Time: 2.404e+05 sec
+# Using Response (RMF) File            16239_bin1.rmf for Source 1
+# Using Auxiliary Response (ARF) File  16239_bin1.arf
+#
+#
+!XSPEC12>da 3:3 16306_bin1_grp1.pi;
+#
+!XSPEC12>data 3:3 16306_bin1_grp1.pi
+#
+#3 spectra  in use
+# 
+#Spectral Data File: 16306_bin1_grp1.pi  Spectrum 3
+#Net count rate (cts/s) for Spectrum:3  2.083e-02 +/- 7.248e-04 (59.8 % total)
+# Assigned to Data Group 3 and Plot Group 3
+#  Noticed Channels:  1-781
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 7.179e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                16306_bin1_bkg.pi
+#  Background Exposure Time: 2.404e+05 sec
+# Using Response (RMF) File            16306_bin1.rmf for Source 1
+# Using Auxiliary Response (ARF) File  16306_bin1.arf
+#
+#
+!XSPEC12>da 4:4 16582_bin1_grp1.pi;
+#
+!XSPEC12>data 4:4 16582_bin1_grp1.pi
+#
+#4 spectra  in use
+# 
+#Spectral Data File: 16582_bin1_grp1.pi  Spectrum 4
+#Net count rate (cts/s) for Spectrum:4  2.077e-02 +/- 1.444e-03 (58.8 % total)
+# Assigned to Data Group 4 and Plot Group 4
+#  Noticed Channels:  1-396
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 1.73e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                16582_bin1_bkg.pi
+#  Background Exposure Time: 2.404e+05 sec
+# Using Response (RMF) File            16582_bin1.rmf for Source 1
+# Using Auxiliary Response (ARF) File  16582_bin1.arf
+#
+#
+!XSPEC12>da 5:5 17595_bin1_grp1.pi;
+#
+!XSPEC12>data 5:5 17595_bin1_grp1.pi
+#
+#5 spectra  in use
+# 
+#Spectral Data File: 17595_bin1_grp1.pi  Spectrum 5
+#Net count rate (cts/s) for Spectrum:5  1.869e-02 +/- 7.939e-04 (55.8 % total)
+# Assigned to Data Group 5 and Plot Group 5
+#  Noticed Channels:  1-744
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 5.714e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                17595_bin1_bkg.pi
+#  Background Exposure Time: 2.404e+05 sec
+# Using Response (RMF) File            17595_bin1.rmf for Source 1
+# Using Auxiliary Response (ARF) File  17595_bin1.arf
+#
+#
+!XSPEC12>da 6:6 17596_bin1_grp1.pi;
+#
+!XSPEC12>data 6:6 17596_bin1_grp1.pi
+#
+#6 spectra  in use
+# 
+#Spectral Data File: 17596_bin1_grp1.pi  Spectrum 6
+#Net count rate (cts/s) for Spectrum:6  1.894e-02 +/- 7.718e-04 (55.5 % total)
+# Assigned to Data Group 6 and Plot Group 6
+#  Noticed Channels:  1-752
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 6.234e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                17596_bin1_bkg.pi
+#  Background Exposure Time: 2.404e+05 sec
+# Using Response (RMF) File            17596_bin1.rmf for Source 1
+# Using Auxiliary Response (ARF) File  17596_bin1.arf
+#
+#
+!XSPEC12>da 7:7 3589_bin1_grp1.pi;
+#
+!XSPEC12>data 7:7 3589_bin1_grp1.pi
+#
+#7 spectra  in use
+# 
+#Spectral Data File: 3589_bin1_grp1.pi  Spectrum 7
+#Net count rate (cts/s) for Spectrum:7  2.540e-02 +/- 1.434e-03 (68.4 % total)
+# Assigned to Data Group 7 and Plot Group 7
+#  Noticed Channels:  1-435
+#  Telescope: CHANDRA Instrument: ACIS  Channel Type: PI
+#  Exposure Time: 1.826e+04 sec
+# Using fit statistic: cstat
+# Using test statistic: chi
+# Using Background File                3589_bin1_bkg.pi
+#  Background Exposure Time: 4.15e+05 sec
+# Using Response (RMF) File            3589_bin1.rmf for Source 1
+# Using Auxiliary Response (ARF) File  3589_bin1.arf
+#
+#
+!XSPEC12>corfile 1-7 none;
+#
+#***XSPEC Error:  cannot open file named: 1-7.cor
+#Error: cannot read correction data file 
+#
+# correction file  read skipped
+#
+!XSPEC12>cornorm 1-7 0.0;
+# Spectrum 1 correction norm set to 0
+# Spectrum 2 correction norm set to 0
+# Spectrum 3 correction norm set to 0
+# Spectrum 4 correction norm set to 0
+# Spectrum 5 correction norm set to 0
+# Spectrum 6 correction norm set to 0
+# Spectrum 7 correction norm set to 0
+#
+!XSPEC12>ig 1-7:**-0.7,7.0-**;
+#
+!XSPEC12>ignore 1-7:**-0.7,7.0-**
+#    19 channels (1-19) ignored in spectrum #     1
+#    24 channels (1-24) ignored in spectrum #     2
+#    24 channels (1-24) ignored in spectrum #     3
+#    14 channels (1-14) ignored in spectrum #     4
+#    27 channels (1-27) ignored in spectrum #     5
+#    25 channels (1-25) ignored in spectrum #     6
+#    19 channels (1-19) ignored in spectrum #     7
+#   271 channels (329-599) ignored in spectrum #     1
+#   280 channels (378-657) ignored in spectrum #     2
+#   374 channels (408-781) ignored in spectrum #     3
+#   146 channels (251-396) ignored in spectrum #     4
+#   351 channels (394-744) ignored in spectrum #     5
+#   351 channels (402-752) ignored in spectrum #     6
+#   184 channels (252-435) ignored in spectrum #     7
+#
+#
+!XSPEC12>ig 1-7:2.10-2.20;
+#
+!XSPEC12>ignore 1-7:2.10-2.20
+#     8 channels (109-116) ignored in spectrum #     1
+#     8 channels (120-127) ignored in spectrum #     2
+#     7 channels (120-126) ignored in spectrum #     3
+#     7 channels (100-106) ignored in spectrum #     4
+#     8 channels (123-130) ignored in spectrum #     5
+#     8 channels (121-128) ignored in spectrum #     6
+#     5 channels (106-110) ignored in spectrum #     7
+#
+#
+!XSPEC12>ig 1-7:1.45-1.55;
+#
+!XSPEC12>ignore 1-7:1.45-1.55
+#     8 channels (66-73) ignored in spectrum #     1
+#     8 channels (76-83) ignored in spectrum #     2
+#     8 channels (76-83) ignored in spectrum #     3
+#     8 channels (64-71) ignored in spectrum #     4
+#     8 channels (79-86) ignored in spectrum #     5
+#     8 channels (77-84) ignored in spectrum #     6
+#     8 channels (70-77) ignored in spectrum #     7
+#
+#
+!XSPEC12>ig 1-7:1.70-1.80;
+#
+!XSPEC12>ignore 1-7:1.70-1.80
+#     8 channels (83-90) ignored in spectrum #     1
+#     8 channels (93-100) ignored in spectrum #     2
+#     8 channels (93-100) ignored in spectrum #     3
+#     6 channels (81-86) ignored in spectrum #     4
+#     8 channels (96-103) ignored in spectrum #     5
+#     8 channels (94-101) ignored in spectrum #     6
+#     7 channels (86-92) ignored in spectrum #     7
+#
+#
+!XSPEC12>ig bad;
+#
+!XSPEC12>ignore bad
+#
+#ignore:    69 channels ignored from  source number 1
+#ignore:     5 channels ignored from  source number 2
+#ignore:    54 channels ignored from  source number 3
+#ignore:    30 channels ignored from  source number 4
+#ignore:    48 channels ignored from  source number 5
+#ignore:    34 channels ignored from  source number 6
+#ignore:    61 channels ignored from  source number 7
+#
+!XSPEC12>model gauss + gauss + gauss + gauss + apec + (apec + pow + apec) * phabs  ;  0.56        -0.05          0          0      1e+06      1e+06  ;  0           -0.05          0          0         10         20  ;  0e-07       -0.01          0          0      1e+24      1e+24  ;  0.65        -0.05          0          0      1e+06      1e+06  ;  0           -0.05          0          0         10         20  ;  0e-07       -0.01          0          0      1e+24      1e+24  ;  0.81        -0.05          0          0      1e+06      1e+06  ;  0           -0.05          0          0         10         20  ;  0e-07       -0.01          0          0      1e+24      1e+24  ;  0.91        -0.05          0          0      1e+06      1e+06  ;  0           -0.05          0          0         10         20  ;  0e-07       -0.01          0          0      1e+24      1e+24  ;  0.137696    -0.001        0.008    0.008      64      64  ;  1.0         -0.01             0        0       5       5  ;  0.0         -0.01             0        0       2       2  ;  1.49406E-06 -0.001            0        0    1e24    1e24  ;  0.468543    -0.01         0.008    0.008      64      64  ;  1.0         -0.01             0        0       5       5  ;  0.0         -0.01             0        0       2       2  ;  8.19729E-08 -0.001            0        0    1e24    1e24  ;  1.41        -0.01            -5       -5       5       5  ;  3.75609E-07 -0.01             0        0    1e24    1e24  ;  10.0         0.01         0.008    0.008      64      64  ;  0.2         -0.01             0        0       5       5  ;  0.5444      -0.01             0        0       2       2  ;  5e-4         0.001            0        0    1e24    1e24  ;  2.06e-2     -0.001            0        0       1       1  ;  =1  ;  =2  ;  =3  ;  =4  ;  =5  ;  =6  ;  =7  ;  =8  ;  =9  ;  =10  ;  =11  ;  =12  ;  =13  ;  =14  ;  =15  ;  =16  ;  =17  ;  =18  ;  =19  ;  =20  ;  =21  ;  2.80571E-07 -0.01             0        0    1e24    1e24  ;  =23  ;  =24  ;  =25  ;  =26  ;  =27  ;  =1  ;  =2  ;  =3  ;  =4  ;  =5  ;  =6  ;  =7  ;  =8  ;  =9  ;  =10  ;  =11  ;  =12  ;  =13  ;  =14  ;  =15  ;  =16  ;  =17  ;  =18  ;  =19  ;  =20  ;  =21  ;  3.25674E-07 -0.01             0        0    1e24    1e24  ;  =23  ;  =24  ;  =25  ;  =26  ;  =27  ;  =1  ;  =2  ;  =3  ;  =4  ;  =5  ;  =6  ;  =7  ;  =8  ;  =9  ;  =10  ;  =11  ;  =12  ;  =13  ;  =14  ;  =15  ;  =16  ;  =17  ;  =18  ;  =19  ;  =20  ;  =21  ;  =76  ;  =23  ;  =24  ;  =25  ;  =26  ;  =27  ;  =1  ;  =2  ;  =3  ;  =4  ;  =5  ;  =6  ;  =7  ;  =8  ;  =9  ;  =10  ;  =11  ;  =12  ;  =13  ;  =14  ;  =15  ;  =16  ;  =17  ;  =18  ;  =19  ;  =20  ;  =21  ;  2.41433E-07 -0.01             0        0    1e24    1e24  ;  =23  ;  =24  ;  =25  ;  =26  ;  =27  ;  =1  ;  =2  ;  =3  ;  =4  ;  =5  ;  =6  ;  =7  ;  =8  ;  =9  ;  =10  ;  =11  ;  =12  ;  =13  ;  =14  ;  =15  ;  =16  ;  =17  ;  =18  ;  =19  ;  =20  ;  =21  ;  =130  ;  =23  ;  =24  ;  =25  ;  =26  ;  =27  ;  =1  ;  =2  ;  =3  ;  =4  ;  =5  ;  =6  ;  =7  ;  =8  ;  =9  ;  =10  ;  =11  ;  =12  ;  =13  ;  =14  ;  =15  ;  =16  ;  =17  ;  =18  ;  =19  ;  =20  ;  =21  ;  4.27422E-07 -0.01             0        0    1e24    1e24  ;  =23  ;  =24  ;  =25  ;  =26  ;  =27;
+#
+#========================================================================
+#Model gaussian<1> + gaussian<2> + gaussian<3> + gaussian<4> + apec<5> + (apec<6> + powerlaw<7> + apec<8>)phabs<9> Source No.: 1   Active/On
+#Model Model Component  Parameter  Unit     Value
+# par  comp
+#                           Data group: 1
+#   1    1   gaussian   LineE      keV      0.560000     frozen
+#   2    1   gaussian   Sigma      keV      0.0          frozen
+#   3    1   gaussian   norm                0.0          frozen
+#   4    2   gaussian   LineE      keV      0.650000     frozen
+#   5    2   gaussian   Sigma      keV      0.0          frozen
+#   6    2   gaussian   norm                0.0          frozen
+#   7    3   gaussian   LineE      keV      0.810000     frozen
+#   8    3   gaussian   Sigma      keV      0.0          frozen
+#   9    3   gaussian   norm                0.0          frozen
+#  10    4   gaussian   LineE      keV      0.910000     frozen
+#  11    4   gaussian   Sigma      keV      0.0          frozen
+#  12    4   gaussian   norm                0.0          frozen
+#  13    5   apec       kT         keV      0.137696     frozen
+#  14    5   apec       Abundanc            1.00000      frozen
+#  15    5   apec       Redshift            0.0          frozen
+#  16    5   apec       norm                1.49406E-06  frozen
+#  17    6   apec       kT         keV      0.468543     frozen
+#  18    6   apec       Abundanc            1.00000      frozen
+#  19    6   apec       Redshift            0.0          frozen
+#  20    6   apec       norm                8.19729E-08  frozen
+#  21    7   powerlaw   PhoIndex            1.41000      frozen
+#  22    7   powerlaw   norm                3.75609E-07  frozen
+#  23    8   apec       kT         keV      10.0000      +/-  0.0          
+#  24    8   apec       Abundanc            0.200000     frozen
+#  25    8   apec       Redshift            0.544400     frozen
+#  26    8   apec       norm                5.00000E-04  +/-  0.0          
+#  27    9   phabs      nH         10^22    2.06000E-02  frozen
+#                           Data group: 2
+#  28    1   gaussian   LineE      keV      0.560000     = 1
+#  29    1   gaussian   Sigma      keV      0.0          = 2
+#  30    1   gaussian   norm                0.0          = 3
+#  31    2   gaussian   LineE      keV      0.650000     = 4
+#  32    2   gaussian   Sigma      keV      0.0          = 5
+#  33    2   gaussian   norm                0.0          = 6
+#  34    3   gaussian   LineE      keV      0.810000     = 7
+#  35    3   gaussian   Sigma      keV      0.0          = 8
+#  36    3   gaussian   norm                0.0          = 9
+#  37    4   gaussian   LineE      keV      0.910000     = 10
+#  38    4   gaussian   Sigma      keV      0.0          = 11
+#  39    4   gaussian   norm                0.0          = 12
+#  40    5   apec       kT         keV      0.137696     = 13
+#  41    5   apec       Abundanc            1.00000      = 14
+#  42    5   apec       Redshift            0.0          = 15
+#  43    5   apec       norm                1.49406E-06  = 16
+#  44    6   apec       kT         keV      0.468543     = 17
+#  45    6   apec       Abundanc            1.00000      = 18
+#  46    6   apec       Redshift            0.0          = 19
+#  47    6   apec       norm                8.19729E-08  = 20
+#  48    7   powerlaw   PhoIndex            1.41000      = 21
+#  49    7   powerlaw   norm                2.80571E-07  frozen
+#  50    8   apec       kT         keV      10.0000      = 23
+#  51    8   apec       Abundanc            0.200000     = 24
+#  52    8   apec       Redshift            0.544400     = 25
+#  53    8   apec       norm                5.00000E-04  = 26
+#  54    9   phabs      nH         10^22    2.06000E-02  = 27
+#                           Data group: 3
+#  55    1   gaussian   LineE      keV      0.560000     = 1
+#  56    1   gaussian   Sigma      keV      0.0          = 2
+#  57    1   gaussian   norm                0.0          = 3
+#  58    2   gaussian   LineE      keV      0.650000     = 4
+#  59    2   gaussian   Sigma      keV      0.0          = 5
+#  60    2   gaussian   norm                0.0          = 6
+#  61    3   gaussian   LineE      keV      0.810000     = 7
+#  62    3   gaussian   Sigma      keV      0.0          = 8
+#  63    3   gaussian   norm                0.0          = 9
+#  64    4   gaussian   LineE      keV      0.910000     = 10
+#  65    4   gaussian   Sigma      keV      0.0          = 11
+#  66    4   gaussian   norm                0.0          = 12
+#  67    5   apec       kT         keV      0.137696     = 13
+#  68    5   apec       Abundanc            1.00000      = 14
+#  69    5   apec       Redshift            0.0          = 15
+#  70    5   apec       norm                1.49406E-06  = 16
+#  71    6   apec       kT         keV      0.468543     = 17
+#  72    6   apec       Abundanc            1.00000      = 18
+#  73    6   apec       Redshift            0.0          = 19
+#  74    6   apec       norm                8.19729E-08  = 20
+#  75    7   powerlaw   PhoIndex            1.41000      = 21
+#  76    7   powerlaw   norm                3.25674E-07  frozen
+#  77    8   apec       kT         keV      10.0000      = 23
+#  78    8   apec       Abundanc            0.200000     = 24
+#  79    8   apec       Redshift            0.544400     = 25
+#  80    8   apec       norm                5.00000E-04  = 26
+#  81    9   phabs      nH         10^22    2.06000E-02  = 27
+#                           Data group: 4
+#  82    1   gaussian   LineE      keV      0.560000     = 1
+#  83    1   gaussian   Sigma      keV      0.0          = 2
+#  84    1   gaussian   norm                0.0          = 3
+#  85    2   gaussian   LineE      keV      0.650000     = 4
+#  86    2   gaussian   Sigma      keV      0.0          = 5
+#  87    2   gaussian   norm                0.0          = 6
+#  88    3   gaussian   LineE      keV      0.810000     = 7
+#  89    3   gaussian   Sigma      keV      0.0          = 8
+#  90    3   gaussian   norm                0.0          = 9
+#  91    4   gaussian   LineE      keV      0.910000     = 10
+#  92    4   gaussian   Sigma      keV      0.0          = 11
+#  93    4   gaussian   norm                0.0          = 12
+#  94    5   apec       kT         keV      0.137696     = 13
+#  95    5   apec       Abundanc            1.00000      = 14
+#  96    5   apec       Redshift            0.0          = 15
+#  97    5   apec       norm                1.49406E-06  = 16
+#  98    6   apec       kT         keV      0.468543     = 17
+#  99    6   apec       Abundanc            1.00000      = 18
+# 100    6   apec       Redshift            0.0          = 19
+# 101    6   apec       norm                8.19729E-08  = 20
+# 102    7   powerlaw   PhoIndex            1.41000      = 21
+# 103    7   powerlaw   norm                3.25674E-07  = 76
+# 104    8   apec       kT         keV      10.0000      = 23
+# 105    8   apec       Abundanc            0.200000     = 24
+# 106    8   apec       Redshift            0.544400     = 25
+# 107    8   apec       norm                5.00000E-04  = 26
+# 108    9   phabs      nH         10^22    2.06000E-02  = 27
+#                           Data group: 5
+# 109    1   gaussian   LineE      keV      0.560000     = 1
+# 110    1   gaussian   Sigma      keV      0.0          = 2
+# 111    1   gaussian   norm                0.0          = 3
+# 112    2   gaussian   LineE      keV      0.650000     = 4
+# 113    2   gaussian   Sigma      keV      0.0          = 5
+# 114    2   gaussian   norm                0.0          = 6
+# 115    3   gaussian   LineE      keV      0.810000     = 7
+# 116    3   gaussian   Sigma      keV      0.0          = 8
+# 117    3   gaussian   norm                0.0          = 9
+# 118    4   gaussian   LineE      keV      0.910000     = 10
+# 119    4   gaussian   Sigma      keV      0.0          = 11
+# 120    4   gaussian   norm                0.0          = 12
+# 121    5   apec       kT         keV      0.137696     = 13
+# 122    5   apec       Abundanc            1.00000      = 14
+# 123    5   apec       Redshift            0.0          = 15
+# 124    5   apec       norm                1.49406E-06  = 16
+# 125    6   apec       kT         keV      0.468543     = 17
+# 126    6   apec       Abundanc            1.00000      = 18
+# 127    6   apec       Redshift            0.0          = 19
+# 128    6   apec       norm                8.19729E-08  = 20
+# 129    7   powerlaw   PhoIndex            1.41000      = 21
+# 130    7   powerlaw   norm                2.41433E-07  frozen
+# 131    8   apec       kT         keV      10.0000      = 23
+# 132    8   apec       Abundanc            0.200000     = 24
+# 133    8   apec       Redshift            0.544400     = 25
+# 134    8   apec       norm                5.00000E-04  = 26
+# 135    9   phabs      nH         10^22    2.06000E-02  = 27
+#                           Data group: 6
+# 136    1   gaussian   LineE      keV      0.560000     = 1
+# 137    1   gaussian   Sigma      keV      0.0          = 2
+# 138    1   gaussian   norm                0.0          = 3
+# 139    2   gaussian   LineE      keV      0.650000     = 4
+# 140    2   gaussian   Sigma      keV      0.0          = 5
+# 141    2   gaussian   norm                0.0          = 6
+# 142    3   gaussian   LineE      keV      0.810000     = 7
+# 143    3   gaussian   Sigma      keV      0.0          = 8
+# 144    3   gaussian   norm                0.0          = 9
+# 145    4   gaussian   LineE      keV      0.910000     = 10
+# 146    4   gaussian   Sigma      keV      0.0          = 11
+# 147    4   gaussian   norm                0.0          = 12
+# 148    5   apec       kT         keV      0.137696     = 13
+# 149    5   apec       Abundanc            1.00000      = 14
+# 150    5   apec       Redshift            0.0          = 15
+# 151    5   apec       norm                1.49406E-06  = 16
+# 152    6   apec       kT         keV      0.468543     = 17
+# 153    6   apec       Abundanc            1.00000      = 18
+# 154    6   apec       Redshift            0.0          = 19
+# 155    6   apec       norm                8.19729E-08  = 20
+# 156    7   powerlaw   PhoIndex            1.41000      = 21
+# 157    7   powerlaw   norm                2.41433E-07  = 130
+# 158    8   apec       kT         keV      10.0000      = 23
+# 159    8   apec       Abundanc            0.200000     = 24
+# 160    8   apec       Redshift            0.544400     = 25
+# 161    8   apec       norm                5.00000E-04  = 26
+# 162    9   phabs      nH         10^22    2.06000E-02  = 27
+#                           Data group: 7
+# 163    1   gaussian   LineE      keV      0.560000     = 1
+# 164    1   gaussian   Sigma      keV      0.0          = 2
+# 165    1   gaussian   norm                0.0          = 3
+# 166    2   gaussian   LineE      keV      0.650000     = 4
+# 167    2   gaussian   Sigma      keV      0.0          = 5
+# 168    2   gaussian   norm                0.0          = 6
+# 169    3   gaussian   LineE      keV      0.810000     = 7
+# 170    3   gaussian   Sigma      keV      0.0          = 8
+# 171    3   gaussian   norm                0.0          = 9
+# 172    4   gaussian   LineE      keV      0.910000     = 10
+# 173    4   gaussian   Sigma      keV      0.0          = 11
+# 174    4   gaussian   norm                0.0          = 12
+# 175    5   apec       kT         keV      0.137696     = 13
+# 176    5   apec       Abundanc            1.00000      = 14
+# 177    5   apec       Redshift            0.0          = 15
+# 178    5   apec       norm                1.49406E-06  = 16
+# 179    6   apec       kT         keV      0.468543     = 17
+# 180    6   apec       Abundanc            1.00000      = 18
+# 181    6   apec       Redshift            0.0          = 19
+# 182    6   apec       norm                8.19729E-08  = 20
+# 183    7   powerlaw   PhoIndex            1.41000      = 21
+# 184    7   powerlaw   norm                4.27422E-07  frozen
+# 185    8   apec       kT         keV      10.0000      = 23
+# 186    8   apec       Abundanc            0.200000     = 24
+# 187    8   apec       Redshift            0.544400     = 25
+# 188    8   apec       norm                5.00000E-04  = 26
+# 189    9   phabs      nH         10^22    2.06000E-02  = 27
+#________________________________________________________________________
+#
+#
+#Fit statistic : C-Statistic =       23045.80 using 2095 PHA bins and 2093 degrees of freedom.
+#
+#Test statistic : Chi-Squared =       91126.90 using 2095 PHA bins.
+# Reduced chi-squared =       43.53889 for   2093 degrees of freedom 
+# Null hypothesis probability =   0.000000e+00
+# Current data and model not fit yet.
+#
+!XSPEC12>renorm;
+#
+#Fit statistic : C-Statistic =       23045.80 using 2095 PHA bins and 2093 degrees of freedom.
+#
+#Test statistic : Chi-Squared =       91126.90 using 2095 PHA bins.
+# Reduced chi-squared =       43.53889 for   2093 degrees of freedom 
+# Null hypothesis probability =   0.000000e+00
+# Current data and model not fit yet.
+#
+!XSPEC12>fit 1000 1e-2;
+#                                   Parameters
+#C-Statistic  |beta|/N    Lvl         23:kT       26:norm
+#3531.49      1.83125e+07  -3       39.3591   4.73662e-05
+#3167.47      1.62054e+07  -4       13.8577   4.78622e-05
+#2572.64      1.524e+07    -5       5.51971   6.64124e-05
+#2236.58      8.3655e+06   -6       4.53171   8.79939e-05
+#2081.01      3.7373e+06   -7       4.81463   9.81800e-05
+#2008.45      1.77065e+06  -8       5.39548   9.89034e-05
+#1970.18      1.22015e+06  -9       6.04891   9.72545e-05
+#1931.34      1.19472e+06 -10       6.75489   9.73372e-05
+#1912.05      838375      -11       7.45827   9.63453e-05
+#1894.01      803887      -12       8.17898   9.66040e-05
+#1884.21      547557      -13       8.82006   9.62106e-05
+#1876.99      464652      -14       9.52570   9.63889e-05
+#1872.51      345253      -15       10.1200   9.63790e-05
+#1869.6       271126      -16       10.6292   9.63603e-05
+#1868.26      206735      -17       11.0238   9.63450e-05
+#1867.03      196446      -18       11.5219   9.69260e-05
+#1866.31      132557      -19       11.9300   9.73062e-05
+#1865.9       98604.3     -20       12.2415   9.75910e-05
+#1865.66      73768.2     -21       12.4787   9.78063e-05
+#1865.53      55151.9     -22       12.6587   9.79708e-05
+#1865.46      40850.7     -23       12.7923   9.80928e-05
+#1865.42      30252.8     -24       12.8910   9.81827e-05
+#1865.39      22470.4     -25       12.9643   9.82497e-05
+#1865.38      16639.1     -26       13.0185   9.82993e-05
+#1865.37      12343.8     -27       13.0588   9.83362e-05
+#==============================
+# Variances and Principal Axes
+#                23       26  
+# 6.1936E-01| -1.0000   0.0000  
+# 1.9909E-12| -0.0000  -1.0000  
+#------------------------------
+#
+#========================
+#  Covariance Matrix
+#        1           2   
+#   6.194e-01  -1.880e-07
+#  -1.880e-07   2.048e-12
+#------------------------
+#
+#========================================================================
+#Model gaussian<1> + gaussian<2> + gaussian<3> + gaussian<4> + apec<5> + (apec<6> + powerlaw<7> + apec<8>)phabs<9> Source No.: 1   Active/On
+#Model Model Component  Parameter  Unit     Value
+# par  comp
+#                           Data group: 1
+#   1    1   gaussian   LineE      keV      0.560000     frozen
+#   2    1   gaussian   Sigma      keV      0.0          frozen
+#   3    1   gaussian   norm                0.0          frozen
+#   4    2   gaussian   LineE      keV      0.650000     frozen
+#   5    2   gaussian   Sigma      keV      0.0          frozen
+#   6    2   gaussian   norm                0.0          frozen
+#   7    3   gaussian   LineE      keV      0.810000     frozen
+#   8    3   gaussian   Sigma      keV      0.0          frozen
+#   9    3   gaussian   norm                0.0          frozen
+#  10    4   gaussian   LineE      keV      0.910000     frozen
+#  11    4   gaussian   Sigma      keV      0.0          frozen
+#  12    4   gaussian   norm                0.0          frozen
+#  13    5   apec       kT         keV      0.137696     frozen
+#  14    5   apec       Abundanc            1.00000      frozen
+#  15    5   apec       Redshift            0.0          frozen
+#  16    5   apec       norm                1.49406E-06  frozen
+#  17    6   apec       kT         keV      0.468543     frozen
+#  18    6   apec       Abundanc            1.00000      frozen
+#  19    6   apec       Redshift            0.0          frozen
+#  20    6   apec       norm                8.19729E-08  frozen
+#  21    7   powerlaw   PhoIndex            1.41000      frozen
+#  22    7   powerlaw   norm                3.75609E-07  frozen
+#  23    8   apec       kT         keV      13.0588      +/-  0.786997     
+#  24    8   apec       Abundanc            0.200000     frozen
+#  25    8   apec       Redshift            0.544400     frozen
+#  26    8   apec       norm                9.83362E-05  +/-  1.43106E-06  
+#  27    9   phabs      nH         10^22    2.06000E-02  frozen
+#                           Data group: 2
+#  28    1   gaussian   LineE      keV      0.560000     = 1
+#  29    1   gaussian   Sigma      keV      0.0          = 2
+#  30    1   gaussian   norm                0.0          = 3
+#  31    2   gaussian   LineE      keV      0.650000     = 4
+#  32    2   gaussian   Sigma      keV      0.0          = 5
+#  33    2   gaussian   norm                0.0          = 6
+#  34    3   gaussian   LineE      keV      0.810000     = 7
+#  35    3   gaussian   Sigma      keV      0.0          = 8
+#  36    3   gaussian   norm                0.0          = 9
+#  37    4   gaussian   LineE      keV      0.910000     = 10
+#  38    4   gaussian   Sigma      keV      0.0          = 11
+#  39    4   gaussian   norm                0.0          = 12
+#  40    5   apec       kT         keV      0.137696     = 13
+#  41    5   apec       Abundanc            1.00000      = 14
+#  42    5   apec       Redshift            0.0          = 15
+#  43    5   apec       norm                1.49406E-06  = 16
+#  44    6   apec       kT         keV      0.468543     = 17
+#  45    6   apec       Abundanc            1.00000      = 18
+#  46    6   apec       Redshift            0.0          = 19
+#  47    6   apec       norm                8.19729E-08  = 20
+#  48    7   powerlaw   PhoIndex            1.41000      = 21
+#  49    7   powerlaw   norm                2.80571E-07  frozen
+#  50    8   apec       kT         keV      13.0588      = 23
+#  51    8   apec       Abundanc            0.200000     = 24
+#  52    8   apec       Redshift            0.544400     = 25
+#  53    8   apec       norm                9.83362E-05  = 26
+#  54    9   phabs      nH         10^22    2.06000E-02  = 27
+#                           Data group: 3
+#  55    1   gaussian   LineE      keV      0.560000     = 1
+#  56    1   gaussian   Sigma      keV      0.0          = 2
+#  57    1   gaussian   norm                0.0          = 3
+#  58    2   gaussian   LineE      keV      0.650000     = 4
+#  59    2   gaussian   Sigma      keV      0.0          = 5
+#  60    2   gaussian   norm                0.0          = 6
+#  61    3   gaussian   LineE      keV      0.810000     = 7
+#  62    3   gaussian   Sigma      keV      0.0          = 8
+#  63    3   gaussian   norm                0.0          = 9
+#  64    4   gaussian   LineE      keV      0.910000     = 10
+#  65    4   gaussian   Sigma      keV      0.0          = 11
+#  66    4   gaussian   norm                0.0          = 12
+#  67    5   apec       kT         keV      0.137696     = 13
+#  68    5   apec       Abundanc            1.00000      = 14
+#  69    5   apec       Redshift            0.0          = 15
+#  70    5   apec       norm                1.49406E-06  = 16
+#  71    6   apec       kT         keV      0.468543     = 17
+#  72    6   apec       Abundanc            1.00000      = 18
+#  73    6   apec       Redshift            0.0          = 19
+#  74    6   apec       norm                8.19729E-08  = 20
+#  75    7   powerlaw   PhoIndex            1.41000      = 21
+#  76    7   powerlaw   norm                3.25674E-07  frozen
+#  77    8   apec       kT         keV      13.0588      = 23
+#  78    8   apec       Abundanc            0.200000     = 24
+#  79    8   apec       Redshift            0.544400     = 25
+#  80    8   apec       norm                9.83362E-05  = 26
+#  81    9   phabs      nH         10^22    2.06000E-02  = 27
+#                           Data group: 4
+#  82    1   gaussian   LineE      keV      0.560000     = 1
+#  83    1   gaussian   Sigma      keV      0.0          = 2
+#  84    1   gaussian   norm                0.0          = 3
+#  85    2   gaussian   LineE      keV      0.650000     = 4
+#  86    2   gaussian   Sigma      keV      0.0          = 5
+#  87    2   gaussian   norm                0.0          = 6
+#  88    3   gaussian   LineE      keV      0.810000     = 7
+#  89    3   gaussian   Sigma      keV      0.0          = 8
+#  90    3   gaussian   norm                0.0          = 9
+#  91    4   gaussian   LineE      keV      0.910000     = 10
+#  92    4   gaussian   Sigma      keV      0.0          = 11
+#  93    4   gaussian   norm                0.0          = 12
+#  94    5   apec       kT         keV      0.137696     = 13
+#  95    5   apec       Abundanc            1.00000      = 14
+#  96    5   apec       Redshift            0.0          = 15
+#  97    5   apec       norm                1.49406E-06  = 16
+#  98    6   apec       kT         keV      0.468543     = 17
+#  99    6   apec       Abundanc            1.00000      = 18
+# 100    6   apec       Redshift            0.0          = 19
+# 101    6   apec       norm                8.19729E-08  = 20
+# 102    7   powerlaw   PhoIndex            1.41000      = 21
+# 103    7   powerlaw   norm                3.25674E-07  = 76
+# 104    8   apec       kT         keV      13.0588      = 23
+# 105    8   apec       Abundanc            0.200000     = 24
+# 106    8   apec       Redshift            0.544400     = 25
+# 107    8   apec       norm                9.83362E-05  = 26
+# 108    9   phabs      nH         10^22    2.06000E-02  = 27
+#                           Data group: 5
+# 109    1   gaussian   LineE      keV      0.560000     = 1
+# 110    1   gaussian   Sigma      keV      0.0          = 2
+# 111    1   gaussian   norm                0.0          = 3
+# 112    2   gaussian   LineE      keV      0.650000     = 4
+# 113    2   gaussian   Sigma      keV      0.0          = 5
+# 114    2   gaussian   norm                0.0          = 6
+# 115    3   gaussian   LineE      keV      0.810000     = 7
+# 116    3   gaussian   Sigma      keV      0.0          = 8
+# 117    3   gaussian   norm                0.0          = 9
+# 118    4   gaussian   LineE      keV      0.910000     = 10
+# 119    4   gaussian   Sigma      keV      0.0          = 11
+# 120    4   gaussian   norm                0.0          = 12
+# 121    5   apec       kT         keV      0.137696     = 13
+# 122    5   apec       Abundanc            1.00000      = 14
+# 123    5   apec       Redshift            0.0          = 15
+# 124    5   apec       norm                1.49406E-06  = 16
+# 125    6   apec       kT         keV      0.468543     = 17
+# 126    6   apec       Abundanc            1.00000      = 18
+# 127    6   apec       Redshift            0.0          = 19
+# 128    6   apec       norm                8.19729E-08  = 20
+# 129    7   powerlaw   PhoIndex            1.41000      = 21
+# 130    7   powerlaw   norm                2.41433E-07  frozen
+# 131    8   apec       kT         keV      13.0588      = 23
+# 132    8   apec       Abundanc            0.200000     = 24
+# 133    8   apec       Redshift            0.544400     = 25
+# 134    8   apec       norm                9.83362E-05  = 26
+# 135    9   phabs      nH         10^22    2.06000E-02  = 27
+#                           Data group: 6
+# 136    1   gaussian   LineE      keV      0.560000     = 1
+# 137    1   gaussian   Sigma      keV      0.0          = 2
+# 138    1   gaussian   norm                0.0          = 3
+# 139    2   gaussian   LineE      keV      0.650000     = 4
+# 140    2   gaussian   Sigma      keV      0.0          = 5
+# 141    2   gaussian   norm                0.0          = 6
+# 142    3   gaussian   LineE      keV      0.810000     = 7
+# 143    3   gaussian   Sigma      keV      0.0          = 8
+# 144    3   gaussian   norm                0.0          = 9
+# 145    4   gaussian   LineE      keV      0.910000     = 10
+# 146    4   gaussian   Sigma      keV      0.0          = 11
+# 147    4   gaussian   norm                0.0          = 12
+# 148    5   apec       kT         keV      0.137696     = 13
+# 149    5   apec       Abundanc            1.00000      = 14
+# 150    5   apec       Redshift            0.0          = 15
+# 151    5   apec       norm                1.49406E-06  = 16
+# 152    6   apec       kT         keV      0.468543     = 17
+# 153    6   apec       Abundanc            1.00000      = 18
+# 154    6   apec       Redshift            0.0          = 19
+# 155    6   apec       norm                8.19729E-08  = 20
+# 156    7   powerlaw   PhoIndex            1.41000      = 21
+# 157    7   powerlaw   norm                2.41433E-07  = 130
+# 158    8   apec       kT         keV      13.0588      = 23
+# 159    8   apec       Abundanc            0.200000     = 24
+# 160    8   apec       Redshift            0.544400     = 25
+# 161    8   apec       norm                9.83362E-05  = 26
+# 162    9   phabs      nH         10^22    2.06000E-02  = 27
+#                           Data group: 7
+# 163    1   gaussian   LineE      keV      0.560000     = 1
+# 164    1   gaussian   Sigma      keV      0.0          = 2
+# 165    1   gaussian   norm                0.0          = 3
+# 166    2   gaussian   LineE      keV      0.650000     = 4
+# 167    2   gaussian   Sigma      keV      0.0          = 5
+# 168    2   gaussian   norm                0.0          = 6
+# 169    3   gaussian   LineE      keV      0.810000     = 7
+# 170    3   gaussian   Sigma      keV      0.0          = 8
+# 171    3   gaussian   norm                0.0          = 9
+# 172    4   gaussian   LineE      keV      0.910000     = 10
+# 173    4   gaussian   Sigma      keV      0.0          = 11
+# 174    4   gaussian   norm                0.0          = 12
+# 175    5   apec       kT         keV      0.137696     = 13
+# 176    5   apec       Abundanc            1.00000      = 14
+# 177    5   apec       Redshift            0.0          = 15
+# 178    5   apec       norm                1.49406E-06  = 16
+# 179    6   apec       kT         keV      0.468543     = 17
+# 180    6   apec       Abundanc            1.00000      = 18
+# 181    6   apec       Redshift            0.0          = 19
+# 182    6   apec       norm                8.19729E-08  = 20
+# 183    7   powerlaw   PhoIndex            1.41000      = 21
+# 184    7   powerlaw   norm                4.27422E-07  frozen
+# 185    8   apec       kT         keV      13.0588      = 23
+# 186    8   apec       Abundanc            0.200000     = 24
+# 187    8   apec       Redshift            0.544400     = 25
+# 188    8   apec       norm                9.83362E-05  = 26
+# 189    9   phabs      nH         10^22    2.06000E-02  = 27
+#________________________________________________________________________
+#
+#
+#Fit statistic : C-Statistic =        1865.37 using 2095 PHA bins and 2093 degrees of freedom.
+#
+#Test statistic : Chi-Squared =        2398.61 using 2095 PHA bins.
+# Reduced chi-squared =        1.14601 for   2093 degrees of freedom 
+# Null hypothesis probability =   3.069324e-06
+#
+!XSPEC12>error 2.706 23,26;
+# Parameter   Confidence Range (2.706)
+#    23      10.9322      15.5388    (-2.1564,2.45023)
+#    26  9.55501e-05  0.000101333    (-2.81337e-06,2.96979e-06)
+#
+!XSPEC12>quit;
+#
+!XSPEC12>::tclreadline::readline write /home/gogrean/.xspec/xspec.hty
+# XSPEC: quit
+#
+!XSPEC12>tclexit
+#
