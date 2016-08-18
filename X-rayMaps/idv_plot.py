@@ -82,7 +82,7 @@ def values_to_palette(values, cmap='coolwarm', vmin=None, vmax=None):
     colors = []
     for val in values:
         color = color_map((val-vmin)/(vmax-vmin))
-        r, g, b = color[0]*255., color[1]*255., color[2]*255.
-        color = '#%02x%02x%02x' % (r,g,b)
+        r, g, b = np.floor(color[0]*255.), np.floor(color[1]*255.), np.floor(color[2]*255.)
+        color = '#%02x%02x%02x' % (int(r),int(g),int(b))
         colors.append(color)
     return colors
